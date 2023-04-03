@@ -1,0 +1,1 @@
+enum AppRoutesEnum { imagesList, image }
