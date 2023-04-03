@@ -21,5 +21,17 @@ class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'en';
 
   final messages = _notInlinedMessages(_notInlinedMessages);
-  static Map<String, Function> _notInlinedMessages(_) => <String, Function>{};
+  static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "errorConnectingToTheServer": MessageLookupByLibrary.simpleMessage(
+            "Error connecting to the server"),
+        "logoutError": MessageLookupByLibrary.simpleMessage("Logout Error"),
+        "mapperError": MessageLookupByLibrary.simpleMessage(
+            "Error occured during mapping"),
+        "parseError": MessageLookupByLibrary.simpleMessage(
+            "Error occured during json parsing"),
+        "remoteServerInternalError": MessageLookupByLibrary.simpleMessage(
+            "Remote server internal error occurred"),
+        "unknownInternalError": MessageLookupByLibrary.simpleMessage(
+            "Unknown internal error occurred")
+      };
 }

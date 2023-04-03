@@ -49,6 +49,66 @@ class S {
   static S? maybeOf(BuildContext context) {
     return Localizations.of<S>(context, S);
   }
+
+  /// `Error connecting to the server`
+  String get errorConnectingToTheServer {
+    return Intl.message(
+      'Error connecting to the server',
+      name: 'errorConnectingToTheServer',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Remote server internal error occurred`
+  String get remoteServerInternalError {
+    return Intl.message(
+      'Remote server internal error occurred',
+      name: 'remoteServerInternalError',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Logout Error`
+  String get logoutError {
+    return Intl.message(
+      'Logout Error',
+      name: 'logoutError',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Error occured during json parsing`
+  String get parseError {
+    return Intl.message(
+      'Error occured during json parsing',
+      name: 'parseError',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Error occured during mapping`
+  String get mapperError {
+    return Intl.message(
+      'Error occured during mapping',
+      name: 'mapperError',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Unknown internal error occurred`
+  String get unknownInternalError {
+    return Intl.message(
+      'Unknown internal error occurred',
+      name: 'unknownInternalError',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

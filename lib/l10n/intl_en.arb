@@ -1,1 +1,8 @@
-{}
+{
+    "errorConnectingToTheServer": "Error connecting to the server",
+    "remoteServerInternalError": "Remote server internal error occurred",
+    "logoutError": "Logout Error",
+    "parseError": "Error occured during json parsing",
+    "mapperError": "Error occured during mapping",
+    "unknownInternalError": "Unknown internal error occurred"
+}
