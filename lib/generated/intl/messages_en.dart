@@ -22,6 +22,7 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "dismiss": MessageLookupByLibrary.simpleMessage("Dismiss"),
         "errorConnectingToTheServer": MessageLookupByLibrary.simpleMessage(
             "Error connecting to the server"),
         "logoutError": MessageLookupByLibrary.simpleMessage("Logout Error"),

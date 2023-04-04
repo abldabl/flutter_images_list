@@ -4,5 +4,6 @@
     "logoutError": "Logout Error",
     "parseError": "Error occured during json parsing",
     "mapperError": "Error occured during mapping",
-    "unknownInternalError": "Unknown internal error occurred"
+    "unknownInternalError": "Unknown internal error occurred",
+    "dismiss": "Dismiss"
 }
