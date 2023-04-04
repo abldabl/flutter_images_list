@@ -42,7 +42,10 @@ class _ImagesListScreenState extends ConsumerState<ImagesListScreen> {
                 ),
               ),
               const SizedBox(height: 20),
-              ImagesList(images: images),
+              ImagesList(
+                images: images,
+                onImageTap: _screenController.onImageTap,
+              ),
               const SizedBox(height: 20),
             ],
           ),

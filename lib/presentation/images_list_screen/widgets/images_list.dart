@@ -4,8 +4,13 @@ import 'package:flutter_image_list/presentation/images_list_screen/widgets/image
 
 class ImagesList extends StatelessWidget {
   final List<GetImagesResponseModelData> images;
+  final ValueSetter<String> onImageTap;
 
-  const ImagesList({super.key, required this.images});
+  const ImagesList({
+    super.key,
+    required this.images,
+    required this.onImageTap,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +24,10 @@ class ImagesList extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 10),
       children: List.generate(
         images.length,
-        (i) => ImageCard(image: images[i]),
+        (i) => ImageCard(
+          image: images[i],
+          onImageTap: onImageTap,
+        ),
       ),
     );
   }

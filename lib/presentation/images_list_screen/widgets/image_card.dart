@@ -4,23 +4,19 @@ import 'package:flutter_image_list/presentation/themes/app_theme_scope.dart';
 
 class ImageCard extends StatelessWidget {
   final GetImagesResponseModelData image;
-  const ImageCard({super.key, required this.image});
+  final ValueSetter<String> onImageTap;
+
+  const ImageCard({
+    super.key,
+    required this.image,
+    required this.onImageTap,
+  });
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       borderRadius: BorderRadius.circular(13),
-      onTap: () {
-        // Navigator.push(
-        //     context,
-        //     MaterialPageRoute(
-        //       builder: (context) => ChangeNotifierProvider<MovieInfoRefresh>(
-        //           create: (context) => MovieInfoRefresh(refresh: 'refresh'),
-        //           child: MovieInfoScreen(
-        //             movieId: id,
-        //           )),
-        //     ));
-      },
+      onTap: () => onImageTap(image.urls.raw),
       child: Container(
         clipBehavior: Clip.antiAlias,
         decoration: BoxDecoration(

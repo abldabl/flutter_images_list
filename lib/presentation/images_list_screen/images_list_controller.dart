@@ -1,7 +1,9 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_image_list/core/enums/app_routes_enum.dart';
 import 'package:flutter_image_list/domain/interactors/images/get_images_interactor.dart';
+import 'package:flutter_image_list/presentation/image_screen/image_screen_arguments.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'images_list_state.dart';
@@ -29,5 +31,13 @@ class ImagesListScreenController extends StateNotifier<ImagesListScreenState> {
     if (responseModel.hasData) {
       state = state.copyWith(images: responseModel.data);
     } else {}
+  }
+
+  void onImageTap(String url) {
+    Navigator.pushNamed(
+      _context,
+      AppRoutesEnum.image.name,
+      arguments: ImageScreenArguments(url: url),
+    );
   }
 }
