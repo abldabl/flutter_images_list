@@ -40,7 +40,6 @@ dependencies:
   intl: ^0.17.0
 
   intl_utils: ^2.8.1
-  pull_to_refresh: ^2.0.0
 
   # state management
   flutter_riverpod: ^1.0.4

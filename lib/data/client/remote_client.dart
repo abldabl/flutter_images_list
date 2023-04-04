@@ -25,7 +25,6 @@ class RemoteClient {
     required String method,
     String? body,
     int timeout = 15,
-    required String methodName,
   }) async {
     try {
       http.Request request = http.Request(
@@ -40,8 +39,8 @@ class RemoteClient {
       http.StreamedResponse sResponse = await request.send().timeout(Duration(seconds: timeout));
       http.Response response = await http.Response.fromStream(sResponse);
       if (response.statusCode >= 200 && response.statusCode < 300) {
-        BaseResponseEntry entry =
-            BaseResponseEntry.fromJson(json.decode(utf8.decode(response.bodyBytes)));
+        BaseResponseEntry entry = BaseResponseEntry(
+            response.reasonPhrase ?? '', json.decode(utf8.decode(response.bodyBytes)));
         if (entry.result == 'OK') {
           return BaseEntry<BaseResponseEntry>(data: entry);
         } else {
